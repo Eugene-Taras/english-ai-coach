@@ -1,14 +1,23 @@
 # ENG‑Coach — AI tutor in Telegram
-ENG‑Coach is an AI-powered English tutor in Telegram. Practice translation, get feedback with explanations, access grammar theory, and hear native-like audio. Covers levels A1–B2 with multilingual UI. Built solo in 3 months with tests and architecture. Suitable for EdTech pilots or personal use.
-- A smart English trainer in Telegram: clear error explanations, contextual theory, and TTS — all in one dialogue.
-- Fast learning cycle: do → make a mistake → understand ↔ fix → reinforce.
 
+ENG-Coach is an AI-powered English tutor in Telegram. Translate short prompts, get human-like feedback with on-demand grammar theory, and listen to reference audio (TTS).  
+Supports 18 languages and A1–B2 levels with a multilingual UI.  
+Built solo in ~3 months (AI-assisted) with tests and a clean architecture. Suitable for EdTech pilots and personal use.
+
+**Status:** MVP (public demo). Active development; API/UX may change.  
 **Try the demo:** [@YourEnglishAICoachBot](https://t.me/YourEnglishAICoachBot)  
-**Looking for EdTech pilots/collaboration →** aiengcoach@gmail.com
+**Contact for pilots:** [aiengcoach@gmail.com](mailto:aiengcoach@gmail.com)
 
+---
 
-> Solo project built in ~3 months. No prior IT background; AI used as an engineering assistant.  
-> A working Telegram bot with multiple explanation styles, error analysis, theory, and audio.
+## TL;DR
+
+Translate → get AI feedback, theory, and TTS  
+18 languages · Levels A1–B2 · Two modes: **Live feedback** & **Analysis + Theory**   
+Built with Python + OpenAI + Telegram + gTTS + SQLite
+
+A smart English trainer in Telegram with clear error explanations, contextual grammar theory, and reference audio — all in one dialogue.  
+Fast learning loop: do → make a mistake → understand → fix → reinforce.
 
 ---
 
@@ -27,9 +36,9 @@ ENG‑Coach is an AI-powered English tutor in Telegram. Practice translation, ge
 
 ### Video demos
 - Correct answer → TTS: [watch](https://github.com/user-attachments/assets/55180dcb-49b5-4309-9084-bb7cb7f1d309)
-- Second chance (hint → retry): [watch](https://github.com/user-attachments/assets/50ff4d49-a19c-4bcd-ad43-6960c9094481)
-- Multiple errors (RU): [watch](https://github.com/user-attachments/assets/40c266a1-0ea6-4f2b-a815-a591442edc34)
-- Multilingual UI: [watch](https://github.com/user-attachments/assets/62f2b85b-ef1e-4590-b145-aa84f0e55c20)
+- Second chance (hint → retry): [watch](https://github.com/user-attachments/assets/40c266a1-0ea6-4f2b-a815-a591442edc34) 
+- Multiple errors (RU): [watch](https://github.com/user-attachments/assets/62f2b85b-ef1e-4590-b145-aa84f0e55c20)
+- Multilingual UI: [watch](https://github.com/user-attachments/assets/50ff4d49-a19c-4bcd-ad43-6960c9094481) 
 
 ### Feature highlights with screenshots
 
@@ -63,6 +72,10 @@ ENG‑Coach is an AI-powered English tutor in Telegram. Practice translation, ge
     </td>
   </tr>
 </table>
+
+**Why it’s different**
+- Error → Theory → Reference audio in one flow (less context switching)
+- Flexible analysis — not tied to one phrasing; accepts valid paraphrases
 
 ---
 
@@ -206,9 +219,11 @@ Development happens in an isolated environment (`telegram_test`) to add features
 ---
 
 ## What I learned
-- Running a product from scratch with AI as a technical partner
-- Designing live learning scenarios (contextual theory)
-- Building robust Telegram bots with high‑quality feedback
+> No prior IT background; AI used as an engineering assistant.
+- How to design and test full user flows in a Telegram environment (from intent → feedback → theory → retry)
+- How to use AI (GPT / Gemini) as a co-developer: prompt design, fallback strategies, and response parsing
+- How to structure NLP-based bots with strong test coverage (unit, integration, E2E)
+- How to optimize UX around language mistakes — blending structure and empathy
 
 ---
 
@@ -216,6 +231,12 @@ Development happens in an isolated environment (`telegram_test`) to add features
 > Telegram: [@YourEnglishAICoachBot](https://t.me/YourEnglishAICoachBot)
 
 ---
+
+## Privacy
+
+This bot does not store any personal data.  
+Logs contain only technical metadata (such as message IDs and timestamps) used for debugging and automated testing.  
+No messages, translations, or user inputs are saved outside the Telegram runtime.
 
 ## Contact
 Creator: Eugene Taras  
